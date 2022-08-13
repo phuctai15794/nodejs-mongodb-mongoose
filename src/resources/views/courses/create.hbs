@@ -1,0 +1,22 @@
+<h3 class="title">Thêm khóa học</h3>
+<div class="content">
+    <form method="POST" action="/courses/store">
+        <div class="form-group">
+            <label for="name">Tiêu đề</label>
+            <input type="text" class="form-control" name="name" id="name" placeholder="Tiêu đề khóa học">
+        </div>
+        <div class="form-group">
+            <label for="description">Mô tả</label>
+            <textarea class="form-control" name="description" id="description" rows="5" placeholder="Mô tả khóa học"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="videoID">Video ID</label>
+            <input type="text" class="form-control" name="videoID" id="videoID" placeholder="Video ID khóa học">
+        </div>
+        <div class="form-group">
+            <label for="level">Level</label>
+            <input type="text" class="form-control" name="level" id="level" placeholder="Level khóa học">
+        </div>
+        <button type="submit" class="btn btn-primary">Thêm khóa học</button>
+    </form>
+</div>

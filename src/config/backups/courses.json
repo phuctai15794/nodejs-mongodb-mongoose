@@ -1,0 +1,150 @@
+[
+    {
+        "_id": {
+            "$oid": "6209e08dfb22ec7cead9ce89"
+        },
+        "name": "Node & ExpressJS",
+        "description": "Học Back-end với Node & ExpressJS framework, hiểu các khái niệm khi làm Back-end và xây dựng RESTful API cho trang web.",
+        "image": "https://i.ytimg.com/vi/z2f7RHgvddc/maxresdefault.jpg",
+        "slug": "nodejs",
+        "videoID": "CcSuYLjKW3g",
+        "level": "Trình độ cơ bản",
+        "status": ["hot"],
+        "createdAt": {
+            "$date": "2022-02-15T02:51:29.918Z"
+        },
+        "updatedAt": {
+            "$date": "2022-02-17T13:21:16.973Z"
+        },
+        "deleted": false,
+        "deletedAt": {
+            "$date": "2022-02-15T09:15:54.331Z"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "6209f951fb22ec7cead9ce8a"
+        },
+        "name": "Xây Dựng Website với ReactJS",
+        "description": "Khóa học ReactJS từ cơ bản tới nâng cao, kết quả của khóa học này là bạn có thể làm hầu hết các dự án thường gặp với ReactJS.",
+        "image": "https://i.ytimg.com/vi/x0fSBAgBrOQ/maxresdefault.jpg",
+        "slug": "reactjs",
+        "videoID": "x0fSBAgBrOQ",
+        "level": "Trình độ nâng cao",
+        "status": [],
+        "createdAt": {
+            "$date": "2022-02-15T02:51:29.918Z"
+        },
+        "updatedAt": {
+            "$date": "2022-02-15T02:51:29.918Z"
+        },
+        "deleted": false,
+        "deletedAt": null
+    },
+    {
+        "_id": {
+            "$oid": "6209fb9afb22ec7cead9ce8c"
+        },
+        "name": "HTML, CSS từ Zero đến Hero",
+        "description": "Trong khóa này chúng ta sẽ cùng nhau xây dựng giao diện 2 trang web là The Band & Shopee.",
+        "image": "https://i.ytimg.com/vi/R6plN3FvzFY/maxresdefault.jpg",
+        "slug": "html-css",
+        "videoID": "R6plN3FvzFY",
+        "level": "Trình độ trung bình",
+        "status": ["hot"],
+        "createdAt": {
+            "$date": "2022-02-15T02:51:29.918Z"
+        },
+        "updatedAt": {
+            "$date": "2022-02-17T13:21:17.524Z"
+        },
+        "deleted": false,
+        "deletedAt": {
+            "$date": "2022-02-15T09:15:56.883Z"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "6209fbcbfb22ec7cead9ce8d"
+        },
+        "name": "JavaScript Cơ Bản",
+        "description": "Học Javascript cơ bản phù hợp cho người chưa từng học lập trình. Với hơn 100 bài học và có bài tập thực hành sau mỗi bài học.",
+        "image": "https://i.ytimg.com/vi/0SJE9dYdpps/maxresdefault.jpg",
+        "slug": "javascript-co-ban",
+        "videoID": "0SJE9dYdpps",
+        "level": "Trình độ phức tạp",
+        "status": ["hot"],
+        "createdAt": {
+            "$date": "2022-02-15T02:51:29.918Z"
+        },
+        "updatedAt": {
+            "$date": "2022-02-15T02:51:29.918Z"
+        },
+        "deleted": false,
+        "deletedAt": null
+    },
+    {
+        "_id": {
+            "$oid": "6209fbf4fb22ec7cead9ce8e"
+        },
+        "name": "JavaScript Nâng Cao",
+        "description": "Hiểu sâu hơn về cách Javascript hoạt động, tìm hiểu về IIFE, closure, reference types, this keyword, bind, call, apply, prototype, ...",
+        "image": "https://i.ytimg.com/vi/MGhw6XliFgo/maxresdefault.jpg",
+        "slug": "javascript-nang-cao",
+        "videoID": "MGhw6XliFgo",
+        "level": "Trình độ sơ đẳng",
+        "status": [],
+        "createdAt": {
+            "$date": "2022-02-15T02:51:29.918Z"
+        },
+        "updatedAt": {
+            "$date": "2022-02-17T13:21:17.849Z"
+        },
+        "deleted": false,
+        "deletedAt": {
+            "$date": "2022-02-15T09:15:58.960Z"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "620b1531066144da2f590e76"
+        },
+        "name": "Hooks là gì ? Giới thiệu về React Hooks",
+        "slug": "hooks-l-g-gii-thiu-v-react-hooks",
+        "videoID": "5ismRwx4ebM",
+        "level": "Trình độ cơ bản",
+        "description": "Trong React Conf 2018 diễn ra tuần vừa qua ở bang Nevada, Mỹ, nhóm phát triển React đã giới thiệu React Hooks - cho phép sử dụng state và những hiệu ứng lề (side effects) mà không cần phải khai báo ES6 class",
+        "image": "https://i.ytimg.com/vi/5ismRwx4ebM/maxresdefault.jpg",
+        "status": [],
+        "createdAt": {
+            "$date": "2022-02-15T02:51:29.918Z"
+        },
+        "updatedAt": {
+            "$date": "2022-02-15T02:51:29.918Z"
+        },
+        "deleted": false,
+        "deletedAt": null
+    },
+    {
+        "_id": {
+            "$oid": "620b1d97cd0328a3768395f7"
+        },
+        "name": "Add git repository",
+        "videoID": "f0C9kTOf6IY",
+        "level": "Trình độ nâng cao",
+        "description": "Để làm việc với remote thì ban phải có server và cài đặt git remote trên đó, điều này rất ít bạn có điều kiện làm, may ra công ty lớn thì mới có.",
+        "image": "https://i.ytimg.com/vi/f0C9kTOf6IY/maxresdefault.jpg",
+        "status": [],
+        "createdAt": {
+            "$date": "2022-02-15T03:27:19.767Z"
+        },
+        "updatedAt": {
+            "$date": "2022-02-17T13:21:18.140Z"
+        },
+        "slug": "add-git-repository",
+        "deleted": false,
+        "deletedAt": {
+            "$date": "2022-02-15T09:16:00.710Z"
+        }
+    }
+]

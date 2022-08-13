@@ -1,0 +1,101 @@
+<h3 class="title">Khóa học đã xóa</h3>
+<div class="content">
+    <p><a class="text-primary" href="/me/stored/courses">Danh sách khóa học</a></p>
+    {{#if courses}}
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col" class="text-center">#</th>
+                    <th scope="col" class="text-center" width="160">Hình đại diện</th>
+                    <th scope="col">Tên khóa học</th>
+                    <th scope="col" width="160">Trình độ</th>
+                    <th scope="col" width="160">Ngày xóa</th>
+                    <th scope="col" class="text-center" width="160">Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each courses}}
+                    <tr>
+                        <th scope="row" class="text-center">{{ sum @index 1 }}</th>
+                        <td class="text-center">
+                            <img class="course-avatar" src="{{ this.image }}" alt="{{ this.name }}">
+                        </td>
+                        <td>{{ this.name }}</td>
+                        <td>{{ this.level }}</td>
+                        <td>{{ dateFormat this.deletedAt }}</td>
+                        <td class="text-center">
+                            <a class="btn-restore-course text-info mr-2" data-id="{{ this._id }}" href="#" title="Khôi phục">Khôi phục</a>
+                            <hr class="my-1">
+                            <a class="text-danger" data-id="{{ this._id }}" data-toggle="modal" data-target="#modal-force-delete-course"
+                                href="#" title="Xóa vĩnh viển">Xóa vĩnh viển</a>
+                        </td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    {{else}}
+        <div class="alert alert-info">
+            Thùng rác trống. <a href="/me/stored/courses" title="Danh sách khóa học">Danh sách khóa học</a>
+        </div>
+    {{/if}}
+</div>
+
+{{!-- Confirm force delete --}}
+<div class="modal fade" id="modal-force-delete-course" tabindex="-1" aria-labelledby="forceDeleteCourseLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="forceDeleteCourseLabel">Xóa vĩnh viển khóa học</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="mb-1">Bạn chắc chắn muốn xóa vĩnh viển khóa học này ?</p>
+                <p class="text-danger small mb-0">Lưu ý: Dữ liệu sau khi xóa vĩnh viễn sẽ không khôi phục được !</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" id="btn-force-delete-course">Xóa vĩnh viễn</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{!-- Form actions courses --}}
+<form name="form-force-delete-course" method="POST"></form>
+<form name="form-restore-course" method="POST"></form>
+
+{{!-- Confirm script --}}
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        var courseId;
+        const btnRestore = document.querySelectorAll('.btn-restore-course');
+        const formRestore = document.forms['form-restore-course'];
+        const btnForceDelete = document.getElementById('btn-force-delete-course');
+        const formForceDelete = document.forms['form-force-delete-course'];
+
+        $('#modal-force-delete-course').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget);
+            courseId = button.data('id');
+        });
+
+        btnForceDelete.onclick = () => {
+            if(courseId) {
+                formForceDelete.action = `/courses/${courseId}/force-delete?_method=DELETE`;
+                formForceDelete.submit();
+            }
+        }
+
+        btnRestore.forEach(btn => {
+            btn.onclick = (event) => {
+                const courseId = event.target.dataset.id;
+
+                if(courseId) {
+                    formRestore.action = `/courses/${courseId}/restore?_method=PATCH`;
+                    formRestore.submit();
+                }
+            }
+        });
+    });
+</script>

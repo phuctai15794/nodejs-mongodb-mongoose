@@ -1,0 +1,26 @@
+@import 'variables';
+
+.title {
+    color: $color-title-main;
+    margin-bottom: 2rem;
+}
+
+.user-avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.course-avatar {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 0.25rem;
+}
+
+.navbar-dark .navbar-brand {
+    font-size: inherit;
+}
+.dropdown-toggle::after {
+    vertical-align: 0.125em;
+}

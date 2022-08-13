@@ -1,0 +1,42 @@
+{
+    "name": "nodejs-mongodb-mongoose",
+    "version": "1.0.0",
+    "description": "Learning Nodejs with MongoDB and Mongoose",
+    "main": "./src/index.js",
+    "scripts": {
+        "start": "nodemon --inspect ./src/index.js",
+        "watch": "node-sass --watch src/resources/scss/app.scss src/public/css/app.css",
+        "beautiful": "prettier --single-quote --tab-width 4 --trailing-comma all --write \"src/**/*.{js,json,scss}\"",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/phuctai/learning-nodejs.git"
+    },
+    "keywords": [
+        "Nodejs",
+        "MongoDB",
+        "Mongoose"
+    ],
+    "author": "Phuc Tai",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/phuctai/learning-nodejs/issues"
+    },
+    "homepage": "https://github.com/phuctai/learning-nodejs#readme",
+    "dependencies": {
+        "express": "^4.17.2",
+        "express-handlebars": "^6.0.2",
+        "method-override": "^3.0.0",
+        "moment": "^2.29.1",
+        "mongoose": "^6.2.1",
+        "mongoose-delete": "^0.5.4",
+        "mongoose-slug-generator": "^1.0.4"
+    },
+    "devDependencies": {
+        "morgan": "^1.10.0",
+        "node-sass": "^7.0.1",
+        "nodemon": "^2.0.15",
+        "prettier": "^2.5.1"
+    }
+}
